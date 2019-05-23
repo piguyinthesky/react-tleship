@@ -1,3 +1,7 @@
+# React-tleship
+
+The classic game Battleship, programmed using React and [hosted using Github Pages](https://piguyinthesky.github.io/react-tleship/)!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
