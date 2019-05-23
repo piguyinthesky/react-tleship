@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-tleship/static/css/main.3fa7586b.chunk.css",
+    "main.js": "/react-tleship/static/js/main.fc1b7e3e.chunk.js",
+    "main.js.map": "/react-tleship/static/js/main.fc1b7e3e.chunk.js.map",
+    "runtime~main.js": "/react-tleship/static/js/runtime~main.59714d24.js",
+    "runtime~main.js.map": "/react-tleship/static/js/runtime~main.59714d24.js.map",
+    "static/js/2.0e3f6a1a.chunk.js": "/react-tleship/static/js/2.0e3f6a1a.chunk.js",
+    "static/js/2.0e3f6a1a.chunk.js.map": "/react-tleship/static/js/2.0e3f6a1a.chunk.js.map",
+    "index.html": "/react-tleship/index.html",
+    "precache-manifest.8b8d5fc82ad3fc833838efcf8665fba1.js": "/react-tleship/precache-manifest.8b8d5fc82ad3fc833838efcf8665fba1.js",
+    "service-worker.js": "/react-tleship/service-worker.js",
+    "static/css/main.3fa7586b.chunk.css.map": "/react-tleship/static/css/main.3fa7586b.chunk.css.map"
+  }
+}
