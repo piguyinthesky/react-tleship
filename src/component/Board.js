@@ -1,10 +1,12 @@
 import React from 'react';
 import Square from './Square';
+import './Board.css';
 
 export default class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square
+        key={`square-${i}`}
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
       />
@@ -14,22 +16,41 @@ export default class Board extends React.Component {
   render() {
     return (
       <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
+        <div className="board-row" key="header-row" >
+          {
+            [
+              <Square key="empty" value=" " />
+            ].concat(
+              [...Array(window.CONSTS.NUM_COLS).keys()].map((i) => 
+                <Square 
+                  key={`col-header-${i}`}
+                  value={String.fromCharCode('A'.charCodeAt(0) + i)}
+                />
+              )
+            )
+          }
         </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+        {this.createSquares()}
       </div>
     );
+  }
+
+  createSquares() {
+    const { NUM_ROWS: nr, NUM_COLS: nc } = window.CONSTS;
+
+    return ([...Array(nr).keys()].map(i => (
+      <div className="board-row" key={`row-${i}`}>
+        {
+          [
+            <Square
+              key={`row-header-${i}`} 
+              value={i+1}
+            />
+          ].concat([...Array(nc).keys()].map(j =>
+            this.renderSquare(i * nc + j)
+          ))
+        }
+      </div>
+    )))
   }
 }

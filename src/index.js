@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import Game from './component/Game';
 import './index.css';
 
-const NUM_ROWS = 7;
-const NUM_COLS = 7;
-const SHIP_LENGTH = 3;
-const EMPTY = '_';
+window.CONSTS = {
+  NUM_ROWS: 7,
+  NUM_COLS: 7,
+  SHIP_LENGTH: 3,
+  NUM_SHIPS: 3,
+  EMPTY: ' ',
+}
 
 ReactDOM.render(<Game />, document.getElementById("root"));

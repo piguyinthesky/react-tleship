@@ -20,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint --ignore-path .gitignore . --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +45,7 @@
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
     "gh-pages": "^2.0.1"
   }
 }

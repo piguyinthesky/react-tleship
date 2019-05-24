@@ -1,0 +1,30 @@
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.hit {
+  background: #ff000099
+}
+
+.miss {
+  background: #14087e
+}
+
+.square:focus {
+  outline: #484848
+}
+
+.empty:hover {
+  background: #0a0a609f;
+}
