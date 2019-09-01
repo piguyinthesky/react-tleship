@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7ecc950dafbbb5040e5ed3ffe76870e2",
+    "revision": "d2c7a68b5e17165eaed2e3fc56bdce35",
     "url": "/react-tleship/index.html"
   },
   {
-    "revision": "cb1ec43584d4c896c60c",
+    "revision": "43580c06043bab98b17d",
     "url": "/react-tleship/static/css/main.2f35634e.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-tleship/static/js/2.33e91bc3.chunk.js"
   },
   {
-    "revision": "cb1ec43584d4c896c60c",
-    "url": "/react-tleship/static/js/main.0038d3b9.chunk.js"
+    "revision": "43580c06043bab98b17d",
+    "url": "/react-tleship/static/js/main.9d3c4c55.chunk.js"
   },
   {
     "revision": "9881d19f278d2254c46e",
