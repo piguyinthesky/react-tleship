@@ -8,8 +8,12 @@ import './Game.css';
 export default class Game extends React.Component {
   constructor(props) {
     super(props);
-    const { NUM_ROWS: nr, NUM_COLS: nc } = window.CONSTS;
-    this.placeShips();
+    this.restart();
+    this.message = null;
+  }
+
+  restart() {
+    const { NUM_ROWS: nr, NUM_COLS: nc, SHIP_LENGTH: sl, NUM_SHIPS } = window.CONSTS;
     this.state = {
       history: [
         {
@@ -19,11 +23,7 @@ export default class Game extends React.Component {
       ],
       stepNumber: 0,
     };
-    this.message = null;
-  }
 
-  placeShips() {
-    const { NUM_ROWS: nr, NUM_COLS: nc, SHIP_LENGTH: sl, NUM_SHIPS } = window.CONSTS;
     let to_place = NUM_SHIPS;
     
     const squares = Array(nr * nc).fill(null);
@@ -122,10 +122,17 @@ export default class Game extends React.Component {
           {this.message}
           <div className="tooltip">
             Hover over me for help!
-            <span class="tooltiptext">There are {window.CONSTS.NUM_SHIPS} on the board, each of which span {window.CONSTS.SHIP_LENGTH} tiles horizontally or vertically. If you click on all three sections of a ship, you sink it! Sink all {window.CONSTS.NUM_SHIPS} ships to win.</span>
+            <span class="tooltiptext">There are {window.CONSTS.NUM_SHIPS} ships on the board, each of which span {window.CONSTS.SHIP_LENGTH} tiles horizontally or vertically. If you click on all three sections of a ship, you sink it! Sink all {window.CONSTS.NUM_SHIPS} ships to win.</span>
           </div>
           <div>{status}</div>
-          <ol>{moves}</ol>
+          <ol>
+            <li>
+              <button onClick={() => {
+                this.restart();
+              }}>Restart</button>
+            </li>
+            {moves}
+          </ol>
         </div>
         <div className="help">
           <div id="help-hit">
