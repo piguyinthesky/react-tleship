@@ -8,12 +8,7 @@ import './Game.css';
 export default class Game extends React.Component {
   constructor(props) {
     super(props);
-    this.restart();
-    this.message = null;
-  }
-
-  restart() {
-    const { NUM_ROWS: nr, NUM_COLS: nc, SHIP_LENGTH: sl, NUM_SHIPS } = window.CONSTS;
+    const { NUM_ROWS: nr, NUM_COLS: nc } = window.CONSTS;
     this.state = {
       history: [
         {
@@ -23,6 +18,21 @@ export default class Game extends React.Component {
       ],
       stepNumber: 0,
     };
+    this.restart();
+    this.message = null;
+  }
+
+  restart() {
+    const { NUM_ROWS: nr, NUM_COLS: nc, SHIP_LENGTH: sl, NUM_SHIPS } = window.CONSTS;
+    this.setState({
+      history: [
+        {
+          displayGrid: Array(nr * nc).fill(null),
+          move: null,
+        }
+      ],
+      stepNumber: 0,
+    });
 
     let to_place = NUM_SHIPS;
     
